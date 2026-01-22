@@ -1,4 +1,4 @@
-# Git & GitHub Mastery Guide: From Beginner to Advanced
+# Git & GitHub Mastery: From Beginner to Advanced
 
 > **Purpose**
 > This repository serves as a **complete learning roadmap** to master **Git and GitHub** for real-world software development.
