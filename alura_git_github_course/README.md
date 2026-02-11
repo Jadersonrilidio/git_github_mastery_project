@@ -191,9 +191,7 @@ TODO:
 echo "\n new info" >> README.md
 git add .
 git commit -m "message"
-
 git pull origin master # or git push origin master?
-
 > remote: Enumerating objects: 5, done.
 > remote: Counting objects: 100% (5/5), done.
 > remote: Compressing objects: 100% (3/3), done.
@@ -327,64 +325,63 @@ Understanding Git’s 3 layers:
 
 
 1. git reset --soft <commit_id>
-    ✅ Moves HEAD
-    ❌ Does NOT change staging area
-    ❌ Does NOT change working directory
+- ✅ Moves HEAD
+- ❌ Does NOT change staging area
+- ❌ Does NOT change working directory
 
 Effect:
-    Your commit disappear
-    Changes remains stagged
+- Your commit disappear
+- Changes remains stagged
 
 Uses:
-    Squashing commits
-    Rewriting commit messages
-    Reorganizing commits cleanly
+- Squashing commits
+- Rewriting commit messages
+- Reorganizing commits cleanly
 
 
 2. git reset --mixed <commit_id> (DEFAULT)
-    ✅ Moves HEAD
-    ✅ Resets staging area
-    ❌ Does NOT change working directory
+- ✅ Moves HEAD
+- ✅ Resets staging area
+- ❌ Does NOT change working directory
 
 Effect:
-    Your commit disappear
-    Changes goes unstagged
+- Your commit disappear
+- Changes goes unstagged
 
 Uses:
-    Uncommit but keep changes
-    Rework a commit from scratch
+- Uncommit but keep changes
+- Rework a commit from scratch
 
 
 3. git reset --hard <commit_id>
-    ✅ Moves HEAD
-    ✅ Resets staging area
-    ✅ Resets working directory
+- ✅ Moves HEAD
+- ✅ Resets staging area
+- ✅ Resets working directory
 
 Effect:
-    Your commit disappear
-    All changes dissapear
-    Files revert to target commit snapshot
+- Your commit disappear
+- All changes dissapear
+- Files revert to target commit snapshot
 
 If you didn’t push, you can recover using `git reflog`, but it feels like deletion.
 
 Uses:
-    Dangerous
-    Use when working in projects alone
+- Dangerous
+- Use when working in projects alone
 
 
 **Professional Rule of Thumb**
 🔹 use `reset`
-    On local branches
-    Before pushing
-    When cleaning history
-    When working alone
+- On local branches
+- Before pushing
+- When cleaning history
+- When working alone
 
 🔹 use `revert`
-    On shared branches
-    After pushing
-    On production branches
-    When traceability matters
-
+- On shared branches
+- After pushing
+- On production branches
+- When traceability matters
 
 ---
 
